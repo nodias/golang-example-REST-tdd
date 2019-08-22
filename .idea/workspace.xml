@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf92dcb2-36ef-41a4-b225-2156c9e08fe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/response_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/response.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -57,7 +53,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd">
+  <component name="RunManager" selected="Go Test.TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd (1)">
+    <configuration name="TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="golang-example-REST-tdd" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/nodias/golang-example-REST-tdd" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestGetNonExistentProduct$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golang-example-REST-tdd" />
       <working_directory value="$PROJECT_DIR$" />
@@ -67,31 +74,25 @@
       <pattern value="^TestGetNonExistentProduct$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestResponseError_Error in github.com/nodias/golang-example-REST-tdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetProduct in github.com/nodias/golang-example-REST-tdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golang-example-REST-tdd" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/nodias/golang-example-REST-tdd" />
-      <pattern value="^TestResponseError_Error$" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestGetProduct$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestResponseError_UnmarshalJSON in github.com/nodias/golang-example-REST-tdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test github.com/nodias/golang-example-REST-tdd (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="golang-example-REST-tdd" />
       <working_directory value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/nodias/golang-example-REST-tdd" />
-      <pattern value="^TestResponseError_UnmarshalJSON$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestResponse_UnMarshalJSON in github.com/nodias/golang-example-REST-tdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="golang-example-REST-tdd" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/nodias/golang-example-REST-tdd" />
-      <pattern value="^TestResponse_UnMarshalJSON$" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <configuration name="go test github.com/nodias/golang-example-REST-tdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -104,11 +105,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd" />
+        <item itemvalue="Go Test.TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd (1)" />
+        <item itemvalue="Go Test.TestGetProduct in github.com/nodias/golang-example-REST-tdd" />
         <item itemvalue="Go Test.go test github.com/nodias/golang-example-REST-tdd" />
-        <item itemvalue="Go Test.TestResponseError_Error in github.com/nodias/golang-example-REST-tdd" />
-        <item itemvalue="Go Test.TestResponseError_UnmarshalJSON in github.com/nodias/golang-example-REST-tdd" />
-        <item itemvalue="Go Test.TestResponse_UnMarshalJSON in github.com/nodias/golang-example-REST-tdd" />
+        <item itemvalue="Go Test.go test github.com/nodias/golang-example-REST-tdd (1)" />
+        <item itemvalue="Go Test.TestGetNonExistentProduct in github.com/nodias/golang-example-REST-tdd" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +121,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -135,73 +138,58 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app.go</url>
-          <line>42</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app.go</url>
-          <line>43</line>
-          <option name="timeStamp" value="41" />
+          <line>40</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app.go</url>
           <line>46</line>
-          <option name="timeStamp" value="42" />
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app.go</url>
-          <line>50</line>
-          <option name="timeStamp" value="43" />
+          <url>file://$PROJECT_DIR$/main_test.go</url>
+          <line>143</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app.go</url>
-          <line>51</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/main_test.go</url>
+          <line>73</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app.go</url>
-          <line>52</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/main_test.go</url>
+          <line>74</line>
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app.go</url>
-          <line>54</line>
-          <option name="timeStamp" value="46" />
+          <url>file://$PROJECT_DIR$/main_test.go</url>
+          <line>75</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app.go</url>
           <line>56</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app.go</url>
-          <line>55</line>
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app.go</url>
           <line>58</line>
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/app.go</url>
-          <line>59</line>
-          <option name="timeStamp" value="51" />
+          <line>70</line>
+          <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main_test.go</url>
-          <line>92</line>
-          <option name="timeStamp" value="52" />
+          <url>file://$PROJECT_DIR$/app.go</url>
+          <line>67</line>
+          <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main_test.go</url>
-          <line>105</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/response.go</url>
-          <line>19</line>
-          <option name="timeStamp" value="55" />
+          <url>file://$PROJECT_DIR$/app.go</url>
+          <line>74</line>
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

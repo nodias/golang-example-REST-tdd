@@ -4,10 +4,27 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
 )
 
+var ErrInvalidProductId = ResponseError{
+	Err:  errors.New("Invalid product ID"),
+	Code: http.StatusBadRequest,
+}
+
+var ErrProductNotFound = ResponseError{
+	Err:  errors.New("Product not found"),
+	Code: http.StatusInternalServerError,
+}
+
+var ErrInvalidRequestPayload = ResponseError{
+	Err:  errors.New("Invalid request paylod"),
+	Code: http.StatusBadRequest,
+}
+
 type ResponseError struct {
-	Err error `json:"err"`
+	Err  error `json:"err"`
+	Code int   `json:"code"`
 }
 
 func (r ResponseError) MarshalJSON() ([]byte, error) {
@@ -27,7 +44,6 @@ func (r *ResponseError) UnmarshalJSON(b []byte) error {
 		r.Err = nil
 		return nil
 	}
-
 	switch t := v.(type) {
 	case string:
 		r.Err = errors.New(t)
@@ -52,3 +68,5 @@ type Response struct {
 func (r Response) Error() string {
 	return r.Err.Error()
 }
+
+

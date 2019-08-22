@@ -30,34 +30,59 @@ func (a *App) Initialize(user, password, dbname, host, port string) {
 func (a *App) InitializeRoute() {
 	r := a.Router.PathPrefix("/").Subrouter()
 	r.Path("/products/").HandlerFunc(a.getProducts).Methods("GET")
-	r.Path("/product/{id:[0-9]+}").HandlerFunc(a.getProduct).Methods("GET")
+	r.Path("/product/{id:[0-9]+}").HandlerFunc(A(a.getProduct)).Methods("GET")
 	r.Path("/product/{id:[0-9]+}").HandlerFunc(a.updateProduct).Methods("UPDATE")
 	r.Path("/product/").HandlerFunc(a.createProduct).Methods("POST")
 	r.Path("/product/{id:[0-9]+}").HandlerFunc(a.deleteProduct).Methods("DELETE")
 }
 
-func (a *App) Run(addr string) {}
+type ResponseHandler func(http.ResponseWriter, *http.Request) (http.ResponseWriter, *http.Request, *Response)
+
+func A(handler ResponseHandler) func(http.ResponseWriter, *http.Request) {
+	f := func(w http.ResponseWriter, req *http.Request){
+		w, req, resp := handler(w, req)
+		json.NewEncoder(w).Encode(resp)
+		w.WriteHeader(resp.Err.Code)
+	}
+	return f
+
+}
+
+func (a *App) Run(addr string) {
+}
 
 func (a *App) getProducts(w http.ResponseWriter, req *http.Request) {
 }
 
-func (a *App) getProduct(w http.ResponseWriter, req *http.Request) {
-	var p product
-	p.ID, err := strconv.Atoi(mux.Vars(req)["id"])
+func (a *App) getProduct(w http.ResponseWriter, req *http.Request) (http.ResponseWriter, *http.Request, *Response){
+	_, err := strconv.Atoi(mux.Vars(req)["id"])
 	if err != nil {
-		w.WriteHeader(http.StatusBadRequest)
+		//err = json.NewEncoder(w).Encode(Response{
+		//	Products: []product{p},
+		//	Err:      respErr,
+		//})
+		resp := Response{
+			Products: []product{},
+			Err:      ErrInvalidProductId,
+		}
+		return w, req, &resp
 	}
 
-	if err := p.get(a.DB); err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+	resp := Response{
+		Products: []product{},
+		Err:      ErrInvalidProductId,
 	}
-	err = json.NewEncoder(w).Encode(Response{
-		Products: []product{p},
-		Err:      ResponseError{err},
-	})
-	if err != nil {
-		w.WriteHeader(http.StatusServiceUnavailable)
-	}
+	return w, req, &resp
+	//if err = p.get(a.DB); err != nil {
+	//	w.WriteHeader(http.StatusInternalServerError)
+	//}
+	//err = json.NewEncoder(w).Encode(Response{
+	//	Products: []product{p},
+	//	Err:      respErr,
+	//})
+	//if err != nil {
+	//	w.WriteHeader(http.StatusServiceUnavailable)
+	//}
 }
 
 func (a *App) updateProduct(w http.ResponseWriter, req *http.Request) {
