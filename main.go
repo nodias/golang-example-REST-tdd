@@ -3,6 +3,12 @@ package main
 import "os"
 
 func main(){
+	os.Setenv("TEST_DB_USERNAME","admin")
+	os.Setenv("TEST_DB_PASSWORD","admin")
+	os.Setenv("TEST_DB_NAME","postgres")
+	os.Setenv("TEST_DB_HOST","54.180.2.92")
+	os.Setenv("TEST_DB_PORT","5432")
+
 	a:= App{}
 	a.Initialize(
 		os.Getenv("APP_DB_USERNAME"),
